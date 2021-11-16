@@ -59,7 +59,7 @@ class RuleBook:
 
     def __init__(self, filename: Path):
         """
-        Create new rulebook from using path to file with rules
+        Create new rulebook using path to file with rules
         :param filename: file path to rules
         """
         self.data = []
