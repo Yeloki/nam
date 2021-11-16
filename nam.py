@@ -5,12 +5,14 @@ Global vars:
 DEBUG - if true - allow you to see what changed after applying some rule
 STEP_BY_STEP - if true - allow you to stop your program after every rule
 DARK_THEME - if true - your terminal will be dark with white letters, else light term with black letters
+PATH_TO_BOOK - this param contain path to file with rules
 """
 DEBUG = True
 STEP_BY_STEP = False
 DARK_THEME = True
 
 from pathlib import Path
+PATH_TO_BOOK = Path('rules.txt')
 
 
 class RuleBook:
@@ -130,6 +132,6 @@ class RuleBook:
 
 if __name__ == '__main__':
     print('\033[40m\033[37m', end='') if DARK_THEME else print('\033[47m\033[30m', end='')
-    rb = RuleBook(Path('rules.txt'))
+    rb = RuleBook(PATH_TO_BOOK)
     print('\033[32m', rb.apply(input('Enter string: ')), end='')
     print('\033[40m\033[37m', end='') if DARK_THEME else print('\033[47m\033[30m', end='')
