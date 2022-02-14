@@ -9,9 +9,10 @@ PATH_TO_BOOK - this param contain path to file with rules
 """
 DEBUG = True
 STEP_BY_STEP = False
-DARK_THEME = True
+DARK_THEME = False
 
 from pathlib import Path
+
 PATH_TO_BOOK = Path('rules.txt')
 
 
